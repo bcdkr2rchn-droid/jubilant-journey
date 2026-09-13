@@ -1,0 +1,352 @@
+<title>Plan Casa Núcleo</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --fondo:#F7F3EA; --papel:#FDFBF5; --beige:#EADDD2;
+  --tinta:#241820; --tinta2:#5E4A52; --tenue:#8A7680;
+  --vino:#66023C; --vino2:#3B0121; --olivo:#5B6E31; --olivo2:#41521F;
+  --oro:#C0A07F; --linea:rgba(139,108,68,.32);
+  --gratis:#5B6E31; --sello-txt:#FDFBF5;
+  --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --texto:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --fondo:#1F171A; --papel:#2A1F23; --beige:#3A2B31;
+    --tinta:#F1E8E0; --tinta2:#D3C2C8; --tenue:#A08E96;
+    --vino:#F0B7C8; --vino2:#F7C6D1; --olivo:#B7C98A; --olivo2:#C9D8A6;
+    --oro:#D9BE9A; --linea:rgba(217,190,154,.28);
+    --gratis:#9CB36A; --sello-txt:#1F171A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --fondo:#1F171A; --papel:#2A1F23; --beige:#3A2B31;
+  --tinta:#F1E8E0; --tinta2:#D3C2C8; --tenue:#A08E96;
+  --vino:#F0B7C8; --vino2:#F7C6D1; --olivo:#B7C98A; --olivo2:#C9D8A6;
+  --oro:#D9BE9A; --linea:rgba(217,190,154,.28);
+  --gratis:#9CB36A; --sello-txt:#1F171A;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--texto);font-weight:300;
+  font-size:15px;line-height:1.75;padding-inline:clamp(16px,4vw,40px);padding-block:0 80px}
+.marco{max-width:1080px;margin:0 auto}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+a{color:inherit}
+.et{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--olivo2)}
+.rombo{display:inline-block;width:9px;height:9px;background:var(--oro);vertical-align:middle;
+  clip-path:polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%)}
+
+/* cabecera */
+.cabeza{padding-block:clamp(48px,7vw,84px) clamp(36px,5vw,56px);border-bottom:1px solid var(--linea);
+  display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px;align-items:end}
+.cabeza h1{font-size:clamp(40px,6vw,72px);line-height:1;font-weight:300;margin:14px 0 18px}
+.cabeza h1 em{font-style:italic;color:var(--vino)}
+.cabeza .baj{max-width:52ch;color:var(--tinta2);font-size:15.5px}
+.cabeza .frase{border-left:1px solid var(--oro);padding-left:22px;font-family:var(--display);
+  font-size:clamp(19px,2.2vw,24px);line-height:1.4;font-style:italic;color:var(--vino)}
+.cabeza .frase small{display:block;font-family:var(--texto);font-style:normal;font-size:10px;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin-top:14px}
+@media (max-width:760px){.cabeza{grid-template-columns:1fr;align-items:start}}
+
+/* secciones */
+section{padding-block:clamp(44px,6vw,72px);border-bottom:1px solid var(--linea)}
+section:last-of-type{border-bottom:0}
+.cab-sec{display:flex;align-items:baseline;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.cab-sec h2{font-size:clamp(28px,3.6vw,42px);line-height:1.1}
+.cab-sec p{color:var(--tinta2);max-width:60ch}
+
+/* diagnóstico del problema */
+.motivos{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 44px;counter-reset:m}
+.motivo{border-top:1px solid var(--oro);padding-top:16px}
+.motivo h3{font-size:22px;margin-bottom:6px}
+.motivo p{color:var(--tinta2);font-size:14px}
+.regla{margin-top:36px;padding:22px 26px;background:var(--beige);font-size:14.5px;display:flex;gap:18px;align-items:baseline}
+.regla b{font-family:var(--display);font-size:20px;font-weight:500;white-space:nowrap;color:var(--vino)}
+@media (max-width:640px){.motivos{grid-template-columns:1fr}.regla{flex-direction:column;gap:6px}}
+
+/* escalera */
+.escalera{display:grid;grid-template-columns:120px 1fr;row-gap:0;border-top:1px solid var(--linea)}
+.escalera > div{padding:14px 0;border-bottom:1px solid var(--linea)}
+.escalera .nivel{font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--tenue);padding-top:20px}
+.escalera .q{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline}
+.escalera .q b{font-family:var(--display);font-size:22px;font-weight:500}
+.escalera .q span{color:var(--tinta2);font-size:13.5px}
+.escalera .q i{font-style:italic;font-family:var(--display);font-size:17px;color:var(--olivo2)}
+@media (max-width:560px){.escalera{grid-template-columns:1fr}.escalera .nivel{padding:14px 0 0;border-bottom:0}.escalera .nivel+div{padding-top:4px}}
+
+/* paquetes: carta */
+.paquete{display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,.58fr);gap:clamp(20px,4vw,56px);
+  padding:clamp(28px,3.5vw,44px) 0;border-top:1px solid var(--oro)}
+.paquete:last-child{border-bottom:1px solid var(--oro)}
+.paquete .sello{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
+  padding:5px 10px;background:var(--vino);color:var(--sello-txt);margin-bottom:14px}
+.paquete .sello.gratis{background:var(--gratis)}
+.paquete .sello.mensual{background:var(--oro);color:var(--vino2)}
+.paquete h3{font-size:clamp(30px,3.4vw,40px);line-height:1.02;margin-bottom:8px}
+.paquete h3 small{display:block;font-family:var(--texto);font-size:10px;font-weight:600;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--olivo2);margin-top:8px}
+.sintoma{font-family:var(--display);font-style:italic;font-size:20px;line-height:1.35;color:var(--vino);margin:14px 0 12px}
+.promesa{font-size:14px;color:var(--tinta2)}
+.promesa b{font-weight:600;color:var(--tinta)}
+.hace{list-style:none;margin:0;padding:0}
+.hace li{position:relative;padding:9px 0 9px 20px;border-top:1px solid var(--linea);font-size:13.5px}
+.hace li:first-child{border-top:0;padding-top:0}
+.hace li::before{content:"";position:absolute;left:0;top:calc(9px + .7em);width:8px;height:1px;background:var(--vino)}
+.hace li:first-child::before{top:.7em}
+.fichas{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;margin-top:18px;border-top:1px solid var(--linea)}
+.ficha{padding:12px 0;font-size:13px}
+.ficha span{display:block;font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--tenue);margin-bottom:4px}
+.ficha.ancha{grid-column:1/-1;border-top:1px solid var(--linea)}
+.nota-vino{margin-top:14px;font-size:12.5px;color:var(--tinta2);padding-left:14px;border-left:2px solid var(--oro)}
+@media (max-width:760px){.paquete{grid-template-columns:1fr;gap:16px}}
+
+/* selector */
+.selector{width:100%;border-collapse:collapse}
+.selector th{text-align:left;font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--tenue);padding:0 0 12px;border-bottom:1px solid var(--oro)}
+.selector td{padding:14px 0;border-bottom:1px solid var(--linea);vertical-align:baseline}
+.selector td:first-child{font-family:var(--display);font-style:italic;font-size:20px;line-height:1.3;padding-right:24px;width:62%}
+.selector td:last-child{font-weight:500;font-size:13.5px;letter-spacing:.04em}
+.selector td:last-child.gratis{color:var(--olivo2)}
+@media (max-width:560px){.selector td:first-child{font-size:18px;width:auto}}
+
+/* complementos */
+.compl{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
+.compl div{padding:16px 0;border-top:1px solid var(--linea)}
+.compl h4{font-size:19px;font-weight:500;margin-bottom:4px}
+.compl p{font-size:13px;color:var(--tinta2)}
+.compl p em{font-style:normal;color:var(--olivo2);font-size:11px;letter-spacing:.06em}
+@media (max-width:900px){.compl{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.compl{grid-template-columns:1fr}}
+
+/* precios */
+.precio{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.precio ul{margin:0;padding-left:18px;color:var(--tinta2);font-size:14px}
+.precio li{margin-bottom:10px}
+.barras{list-style:none;margin:0;padding:0;font-variant-numeric:tabular-nums}
+.barras li{display:grid;grid-template-columns:110px 1fr 70px;gap:12px;align-items:center;padding:7px 0;font-size:13px}
+.barras li span:first-child{font-family:var(--display);font-size:17px}
+.barras li i{display:block;height:10px;background:var(--vino);opacity:.85;width:calc(var(--v) * 6.5%)}
+.barras li.contigo i{background:var(--oro)}
+.barras li span:last-child{text-align:right;color:var(--tinta2)}
+.barras .aviso{font-size:11px;color:var(--tenue);margin-top:10px;display:block}
+@media (max-width:760px){.precio{grid-template-columns:1fr}}
+
+/* ideas */
+.ideas{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 44px;counter-reset:i}
+.ideas li{counter-increment:i;padding:16px 0 16px 44px;border-top:1px solid var(--linea);position:relative;font-size:14px;color:var(--tinta2)}
+.ideas li::before{content:counter(i);position:absolute;left:0;top:14px;font-family:var(--display);font-size:24px;color:var(--oro);line-height:1}
+.ideas li b{display:block;font-weight:500;color:var(--tinta);font-size:15px;margin-bottom:3px}
+@media (max-width:700px){.ideas{grid-template-columns:1fr}}
+
+/* preguntas */
+.preg{list-style:none;margin:0;padding:0;counter-reset:p}
+.preg li{counter-increment:p;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--linea);font-size:14.5px}
+.preg li::before{content:counter(p);font-family:var(--display);font-size:26px;color:var(--vino);line-height:1}
+.preg li b{font-weight:500}
+.preg li span{display:block;color:var(--tinta2);font-size:13.5px;margin-top:4px}
+.cierre{margin-top:48px;text-align:center;font-family:var(--display);font-style:italic;font-size:22px;color:var(--vino)}
+.cierre small{display:block;font-family:var(--texto);font-style:normal;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--tenue);margin-top:12px}
+a:focus-visible{outline:2px solid var(--vino);outline-offset:3px}
+</style>
+
+<style>
+/* extras del plan */
+.tag{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;padding:4px 9px;margin-right:8px;vertical-align:middle}
+.tag.queda{background:var(--gratis);color:var(--sello-txt)}
+.tag.quita{background:var(--vino);color:var(--sello-txt)}
+.tag.cambia{background:var(--oro);color:var(--vino2)}
+.tabla{width:100%;border-collapse:collapse;font-size:13.5px}
+.tabla th{text-align:left;font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--tenue);padding:0 14px 10px 0;border-bottom:1px solid var(--oro)}
+.tabla td{padding:12px 14px 12px 0;border-bottom:1px solid var(--linea);vertical-align:top;color:var(--tinta2)}
+.tabla td:first-child{color:var(--tinta);font-weight:500;width:34%}
+.tabla td:first-child em{font-style:italic;font-family:var(--display);font-size:17px;font-weight:400}
+.tabla-scroll{overflow-x:auto}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:28px 48px}
+.dos h3{font-size:24px;margin-bottom:8px}
+.dos p,.dos li{font-size:14px;color:var(--tinta2)}
+.dos ul{margin:8px 0 0;padding-left:18px}
+.dos li{margin-bottom:6px}
+@media (max-width:700px){.dos{grid-template-columns:1fr}}
+.nicho{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px;align-items:start}
+.nicho .grande{font-family:var(--display);font-size:clamp(26px,3.4vw,38px);line-height:1.15;color:var(--vino)}
+.nicho ul{list-style:none;margin:0;padding:0}
+.nicho li{padding:10px 0 10px 20px;border-top:1px solid var(--linea);font-size:14px;position:relative;color:var(--tinta2)}
+.nicho li::before{content:"";position:absolute;left:0;top:calc(10px + .7em);width:8px;height:1px;background:var(--vino)}
+@media (max-width:700px){.nicho{grid-template-columns:1fr}}
+.pasos{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;grid-template-columns:repeat(2,1fr);gap:0 44px}
+.pasos li{counter-increment:s;position:relative;padding:14px 0 14px 46px;border-top:1px solid var(--linea);font-size:14px;color:var(--tinta2)}
+.pasos li::before{content:counter(s);position:absolute;left:0;top:12px;font-family:var(--display);font-size:26px;color:var(--oro);line-height:1}
+.pasos li b{display:block;color:var(--tinta);font-weight:500;font-size:15px;margin-bottom:2px}
+@media (max-width:700px){.pasos{grid-template-columns:1fr}}
+.formula{background:var(--beige);padding:22px 26px;font-family:var(--display);font-size:clamp(18px,2.2vw,23px);line-height:1.45;margin-top:22px}
+.formula small{display:block;font-family:var(--texto);font-size:12px;color:var(--tinta2);margin-top:10px;line-height:1.6}
+.meses{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
+.meses div{border-top:1px solid var(--oro);padding-top:16px}
+.meses h3{font-size:23px;margin-bottom:4px}
+.meses .et{display:block;margin-bottom:10px}
+.meses ul{margin:0;padding-left:16px;font-size:13.5px;color:var(--tinta2)}
+.meses li{margin-bottom:6px}
+@media (max-width:800px){.meses{grid-template-columns:1fr;gap:24px}}
+.verdad{border-left:2px solid var(--vino);padding:6px 0 6px 20px;font-family:var(--display);font-size:21px;line-height:1.4;font-style:italic;color:var(--vino);margin-bottom:26px;max-width:60ch}
+</style>
+
+<div class="marco">
+
+<header class="cabeza">
+  <div>
+    <p class="et">Casa Núcleo · Plan de empresa · Documento de trabajo</p>
+    <h1>De idea a <em>empresa</em></h1>
+    <p class="baj">A quién venderle primero, cómo se gana dinero, de dónde salen los primeros diez clientes, qué papel juega la web y qué ideas se quedan, se quitan o se reemplazan.</p>
+  </div>
+  <p class="frase">Somos el estudio que entra a tu negocio como cliente, corrige lo que te cuesta ventas y lo llena de gente. Todo por escrito.
+    <small>Lo que se dice en voz alta · firma: Más negocios bien hechos.</small></p>
+</header>
+
+<section>
+  <div class="cab-sec"><h2>Una decisión antes que todas: a quién le vendemos primero</h2><p>El mayor riesgo de una consultoría nueva es querer servir a todos. Una empresa nace cuando elige.</p></div>
+  <div class="nicho">
+    <div>
+      <p class="grande">Negocios de experiencia en Santiago y San Pedro.</p>
+      <p style="margin-top:14px;color:var(--tinta2);font-size:14px">Restaurantes, cafés, terrazas, hoteles boutique, cabañas, viñedos, quintas, spas, salones de eventos. Segundo nicho, cuando este funcione: comercio y clínicas de San Pedro. Tercero: cadenas con Núcleo Red.</p>
+    </div>
+    <ul>
+      <li>Es donde <b>Núcleo Destino</b> brilla y nadie más lo vende.</li>
+      <li>El <b>cliente invisible</b> funciona de forma natural: se entra, se pide, se reserva.</li>
+      <li>Los resultados <b>se ven</b>: mesas llenas, reservas, fotos. Eso se vuelve casos.</li>
+      <li>Los dueños <b>se conocen entre sí</b>. Un buen trabajo en Santiago se recomienda solo.</li>
+      <li>Santiago es Pueblo Mágico: cada fin de semana llega gente de Monterrey buscando a dónde ir.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>El modelo de dinero</h2></div>
+  <div class="tabla-scroll"><table class="tabla">
+    <thead><tr><th>Fuente</th><th>Qué es</th><th>Papel</th></tr></thead>
+    <tbody>
+      <tr><td>Proyectos</td><td>Origen, Eleva, Destino, Marca, Plus, Red</td><td>Ingreso principal el primer año. Pagan el estudio.</td></tr>
+      <tr><td>Núcleo Contigo</td><td>Acompañamiento mensual</td><td>Recurrente. A los 12 meses debería cubrir los gastos fijos.</td></tr>
+      <tr><td>Complementos y Express</td><td>Entrada y relleno</td><td>Convierten curiosos en clientes y llenan huecos entre proyectos.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="formula">Precio mínimo del paquete = (piso mensual ÷ horas disponibles) × horas del paquete × 1.3
+    <small>Piso mensual: lo que las socias necesitan ganar más los gastos del estudio. Horas disponibles: las reales, descontando ventas y administración (suele quedar el 60 %). Horas del paquete: medidas en los tres primeros proyectos. Si el precio que sale es mayor de lo que el mercado paga, se recorta el paquete, no el precio. Cobro: 50 % de anticipo, 50 % contra entrega; Contigo por adelantado.</small></div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Los primeros diez clientes no vienen de la web</h2><p>Vienen de la lista, de las visitas y de las recomendaciones. La web cierra; no abre.</p></div>
+  <div class="dos">
+    <div><h3>Diagnósticos fundadores</h3><p>Elegir 20 negocios del nicho que las socias admiran. Hacerles el Diagnóstico Núcleo sin que lo pidan y entregarlo en persona, impreso y bonito: "los visitamos como clientes; esto fue lo que vimos". De 20, unos 6 aceptan la conversación y 3 contratan. Esos son los primeros casos. Regla: el reporte es útil aunque no contraten.</p></div>
+    <div><h3>Aliados que ya hablan con el dueño</h3><p>Gente que ve al dueño antes y no compite:</p><ul><li>Contadores (saben quién se estancó).</li><li>Arquitectos, interioristas y constructoras de locales (saben quién va a abrir).</li><li>Inmobiliarias de locales comerciales.</li><li>Proveedores con ruta: café, cerveza artesanal, equipo de cocina, punto de venta.</li><li>Oficina de Pueblo Mágico de Santiago, CANIRAC NL, CANACO, COPARMEX, coworkings.</li></ul></div>
+    <div><h3>Recomendaciones con motivo</h3><p>Cada cliente que termina recibe su medición antes y después y una invitación a recomendar con beneficio concreto (un mes de Contigo, una visita invisible extra). Se pide al cierre, no meses después.</p></div>
+    <div><h3>Una charla al mes</h3><p>"Lo que tu cliente ve y tú no": 45 minutos con hallazgos reales y anónimos. Para CANIRAC, un coworking o un grupo de restauranteros de Santiago. Al final, diagnóstico sin costo para quien lo pida ese día.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Dónde y cómo se vende</h2></div>
+  <div class="dos" style="margin-bottom:36px">
+    <div><h3>Canales, por orden</h3><ul>
+      <li><b>En persona y por recomendación.</b> El 70 % de los primeros clientes.</li>
+      <li><b>WhatsApp.</b> Es <em>el</em> canal de venta: número de empresa, respuestas listas, catálogo, enlace a la web.</li>
+      <li><b>Instagram.</b> El escaparate: hallazgos anónimos, antes y después, el lugar de la semana.</li>
+      <li><b>Google.</b> Ficha impecable de Casa Núcleo y web posicionada en búsquedas locales.</li>
+      <li><b>La web.</b> Donde llegan todos los anteriores a convencerse y pedir el diagnóstico.</li>
+      <li><b>Aliados y charlas.</b></li>
+    </ul><p style="margin-top:10px">Lo que no conviene el primer año: LinkedIn, anuncios grandes, directorios de pago, ferias caras.</p></div>
+    <div><h3>Objeciones típicas</h3><ul>
+      <li><b>"Está caro."</b> Express o un complemento suelto. Nunca se descuenta el paquete grande.</li>
+      <li><b>"Lo voy a pensar."</b> "Perfecto. ¿Te sirve que mientras hagamos la ficha de Google?"</li>
+      <li><b>"Ya tengo agencia."</b> "Nosotras no hacemos anuncios; corregimos el negocio para que lo que ellas traen no se pierda en el mostrador."</li>
+      <li><b>"¿Me garantizan ventas?"</b> No. Se garantiza medición honesta antes y después. Quien promete ventas miente.</li>
+      <li><b>"¿Y si no funciona?"</b> Cada paso se cotiza aparte y se para cuando quieran.</li>
+    </ul></div>
+  </div>
+  <p class="et" style="margin-bottom:6px">El proceso de venta</p>
+  <ol class="pasos">
+    <li><b>Contacto</b>Por WhatsApp, formulario o en persona. Se responde el mismo día.</li>
+    <li><b>Filtro de dos minutos</b>Qué negocio, qué ciudad, qué etapa. Si no es para Casa Núcleo, se dice y se recomienda a alguien.</li>
+    <li><b>Diagnóstico Núcleo</b>Una semana. Se entrega en persona, en 30 minutos, impreso.</li>
+    <li><b>Una sola recomendación</b>Nunca el catálogo: "lo que tu negocio necesita es Eleva, con este complemento".</li>
+    <li><b>Propuesta por escrito en 48 horas</b>Alcance, incluye y no incluye, plazos, precio, propiedad. Es la primera muestra de "todo por escrito".</li>
+    <li><b>Cierre</b>Firma, anticipo, fecha de arranque en el calendario.</li>
+    <li><b>Entrega con números</b>Segunda visita invisible, medición antes y después, carta de recomendación, oferta de Contigo.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>La web como máquina de atraer y convertir</h2></div>
+  <p class="verdad">Verdad incómoda: para una consultoría local de dos socias, la web no va a traer tráfico masivo. Va a convencer a quien ya oyó de ustedes, a aparecer en búsquedas concretas y a filtrar prospectos antes de que hablen con las socias. Las tres cosas importan.</p>
+  <div class="dos">
+    <div><h3>Autodiagnóstico Núcleo</h3><p>Doce preguntas en la web: "¿Cuánto tardan en responder un WhatsApp un sábado en la noche?", "¿Tu ficha de Google tiene fotos de este año?", "¿Sabes qué platillo te deja más margen?". Al final: calificación, tres hallazgos, paquete recomendado y botón de WhatsApp. Es el diagnóstico gratuito en autoservicio: engancha, califica y captura el contacto. La pieza más inteligente que puede tener la web.</p></div>
+    <div><h3>Índice Núcleo</h3><p>Cada trimestre, cliente invisible a 30 o 40 negocios de un giro, sin nombrarlos, y se publican los resultados: "Escribimos a 40 restaurantes de San Pedro un sábado a las 9 pm. Respondieron 9. Solo 3 dieron una respuesta útil." Es noticia local, contenido para semanas y autoridad instantánea. Cuesta dos días por trimestre.</p></div>
+    <div><h3>Páginas por síntoma</h3><p>No una página "Servicios", sino una por caso, con el título que el dueño escribiría en Google: "Tengo un restaurante en Santiago y no llega gente entre semana". Cada una lleva a su paquete y al autodiagnóstico.</p></div>
+    <div><h3>Casos con antes y después</h3><p>Tres números por caso. Sin números no hay caso; se espera a tenerlos. Mientras, el Índice Núcleo ocupa ese lugar.</p></div>
+    <div><h3>Un solo botón</h3><p>"Pide tu Diagnóstico Núcleo, sin costo", con WhatsApp al lado. El formulario pregunta etapa, giro y ciudad: es el filtro de dos minutos hecho solo.</p></div>
+    <div><h3>Anuncios pequeños y medidos</h3><p>Cuando exista el autodiagnóstico: campaña en Instagram y Facebook a dueños de negocios en Nuevo León, presupuesto chico, dos meses, midiendo costo por diagnóstico solicitado. Si no cierra, se apaga.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Lo que hace empresa a una empresa</h2><p>Lo poco vistoso que separa un proyecto de dos amigas de un negocio que dura.</p></div>
+  <div class="dos">
+    <div><h3>Figura y contrato</h3><p>Persona física con actividad empresarial o una SAS. Contrato con tres cláusulas clave: los entregables son del cliente, confidencialidad (entran a negocios como clientes y ven cosas) y no se garantizan resultados de venta. Confirmar que el ® corresponde a un registro real en el IMPI.</p></div>
+    <div><h3>Plantillas antes que clientes</h3><p>Reporte de diagnóstico, propuesta, contrato, Manual Núcleo, carta de cierre. Es lo que hace que el tercer cliente cueste la mitad que el primero.</p></div>
+    <div><h3>Roles y ritual</h3><p>Una socia responde por negocio y operación, otra por marca y sitio. Una sola es dueña de la lista de prospectos aunque las dos vendan. Una hora los lunes: prospectos, proyectos, cobros, contenido.</p></div>
+    <div><h3>Cinco números en la pared</h3><p>Diagnósticos al mes · conversión a proyecto · ticket promedio · clientes en Contigo · recomendaciones recibidas. Con esos cinco se sabe si la empresa está viva. Cupo: máximo 3 proyectos activos a la vez, y decirlo.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Veredicto</h2><p>Qué se queda, qué se quita y qué se reemplaza.</p></div>
+  <div class="tabla-scroll"><table class="tabla">
+    <thead><tr><th>Idea</th><th>Veredicto</th><th>Por qué</th></tr></thead>
+    <tbody>
+      <tr><td>Diagnóstico sin costo entrando como cliente</td><td><span class="tag queda">Se queda</span></td><td>Gancho, método y diferenciador a la vez.</td></tr>
+      <tr><td>"Todo queda por escrito" y el Manual Núcleo</td><td><span class="tag queda">Se queda</span></td><td>Tangible y distinto de una agencia.</td></tr>
+      <tr><td>Criterio de no prometer ventas</td><td><span class="tag queda">Se queda</span></td><td>Confianza en un gremio que promete de más.</td></tr>
+      <tr><td>Dos socias con roles definidos · sistema visual y logotipo</td><td><span class="tag queda">Se queda</span></td><td>Dan cara; ya están al nivel.</td></tr>
+      <tr><td>Núcleo Destino · Núcleo Contigo · cupo limitado</td><td><span class="tag queda">Se queda</span></td><td>La idea más diferenciada, la estabilidad, y algo cierto que vende.</td></tr>
+      <tr><td>Los "cinco pasos" y los "Programa I/II/III" como estructura pública</td><td><span class="tag quita">Se quita</span></td><td>Describen el proceso, no el resultado.</td></tr>
+      <tr><td>Sección "El sitio" con demos · "Sitio a la medida" como servicio visible</td><td><span class="tag quita">Se quita</span></td><td>Vende diseño web, compite con agencias de bajo margen. Se queda dentro de Marca.</td></tr>
+      <tr><td>Portafolio "próximamente" · video de 10 MB · lema alterno "Ideas con esencia"</td><td><span class="tag quita">Se quita</span></td><td>Resta, no abre en celular, un solo lema.</td></tr>
+      <tr><td>Mostrar 15 complementos en la web</td><td><span class="tag quita">Se quita</span></td><td>Se muestran seis; el resto vive en la propuesta.</td></tr>
+      <tr><td>"Impulsa · Eleva · A la medida"</td><td><span class="tag cambia">Se reemplaza</span></td><td>Por Origen · Eleva · Red, más Destino, Marca, Plus, Express y Contigo.</td></tr>
+      <tr><td>"Manual de Cimientos" y "de Crecimiento" · ocho capítulos fijos</td><td><span class="tag cambia">Se reemplaza</span></td><td>Un solo Manual Núcleo con los capítulos que aplican a cada paquete.</td></tr>
+      <tr><td>Titular "Diseñamos tu marca"</td><td><span class="tag cambia">Se reemplaza</span></td><td>"Impulsamos negocios nuevos. Elevamos los que ya tienen historia." + botón de diagnóstico.</td></tr>
+      <tr><td>Diagnóstico solo como visita · formulario por correo</td><td><span class="tag cambia">Se reemplaza</span></td><td>Visita + Autodiagnóstico en la web; formulario real + WhatsApp.</td></tr>
+      <tr><td>"Consultoría de desarrollo de negocios" como titular</td><td><span class="tag cambia">Se reemplaza</span></td><td>Queda como descriptor en el pie y en Google; en voz alta, "el estudio que entra a tu negocio como cliente".</td></tr>
+      <tr><td>Espacio que vende · Contenido de 90 días · precios visibles · anuncios</td><td><span class="tag cambia">Con cuidado</span></td><td>Solo si saben hacerlo o hay aliado fijo; precios "desde" tras medir horas; anuncios solo con autodiagnóstico y fecha de fin.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Los primeros noventa días</h2><p>Si al final del mes 3 hay tres proyectos y un índice publicado, hay empresa. Si no, el problema casi siempre está en el nicho o en el precio, no en la web.</p></div>
+  <div class="meses">
+    <div><span class="et">Mes 1</span><h3>Cerrar la oferta y la casa</h3><ul><li>Nicho, nombres y paquete bandera.</li><li>Horas por paquete y precios "desde".</li><li>Plantillas: diagnóstico, propuesta, contrato, Manual, carta de cierre.</li><li>Web v2 con "¿Qué le pasa a tu negocio?", autodiagnóstico, formulario y WhatsApp.</li><li>Ficha de Google. Instagram con doce publicaciones listas.</li><li>Lista de 20 negocios fundadores y 10 aliados.</li></ul></div>
+    <div><span class="et">Mes 2</span><h3>Salir a la calle</h3><ul><li>Diez diagnósticos fundadores entregados en persona.</li><li>Tres aliados cerrados por escrito.</li><li>Una charla dada.</li><li>Arranca el primer Índice Núcleo.</li></ul></div>
+    <div><span class="et">Mes 3</span><h3>Primeros casos</h3><ul><li>Tres proyectos firmados: uno Destino, uno Eleva, uno Express o Marca.</li><li>Publicar el Índice Núcleo y buscar una nota en un medio local.</li><li>Primer caso con antes y después.</li><li>Ofrecer Contigo al primer cliente que termine.</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Lo que necesito de ustedes</h2></div>
+  <ol class="preg">
+    <li><div><b>Confirmar el nicho de arranque</b><span>Experiencia en Santiago y San Pedro, o proponer otro.</span></div></li>
+    <li><div><b>El piso mensual y las horas disponibles</b><span>Con eso se cierran los precios.</span></div></li>
+    <li><div><b>Qué hacen con sus manos</b><span>Fotografía, video, espacios, eventos, sitio, capacitación.</span></div></li>
+    <li><div><b>Veinte nombres de negocios que admiran en el nicho</b><span>Es la lista fundadora.</span></div></li>
+    <li><div><b>Si el ® ya está registrado en el IMPI</b><span>Si no, se inicia.</span></div></li>
+  </ol>
+  <p class="cierre">Más negocios bien hechos.<small>Casa Núcleo · Monterrey · San Pedro Garza García · Santiago</small></p>
+</section>
+
+</div>

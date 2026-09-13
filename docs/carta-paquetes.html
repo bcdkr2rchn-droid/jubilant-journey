@@ -1,0 +1,489 @@
+<title>Carta de Paquetes Casa Núcleo</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --fondo:#F7F3EA; --papel:#FDFBF5; --beige:#EADDD2;
+  --tinta:#241820; --tinta2:#5E4A52; --tenue:#8A7680;
+  --vino:#66023C; --vino2:#3B0121; --olivo:#5B6E31; --olivo2:#41521F;
+  --oro:#C0A07F; --linea:rgba(139,108,68,.32);
+  --gratis:#5B6E31; --sello-txt:#FDFBF5;
+  --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --texto:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --fondo:#1F171A; --papel:#2A1F23; --beige:#3A2B31;
+    --tinta:#F1E8E0; --tinta2:#D3C2C8; --tenue:#A08E96;
+    --vino:#F0B7C8; --vino2:#F7C6D1; --olivo:#B7C98A; --olivo2:#C9D8A6;
+    --oro:#D9BE9A; --linea:rgba(217,190,154,.28);
+    --gratis:#9CB36A; --sello-txt:#1F171A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --fondo:#1F171A; --papel:#2A1F23; --beige:#3A2B31;
+  --tinta:#F1E8E0; --tinta2:#D3C2C8; --tenue:#A08E96;
+  --vino:#F0B7C8; --vino2:#F7C6D1; --olivo:#B7C98A; --olivo2:#C9D8A6;
+  --oro:#D9BE9A; --linea:rgba(217,190,154,.28);
+  --gratis:#9CB36A; --sello-txt:#1F171A;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--texto);font-weight:300;
+  font-size:15px;line-height:1.75;padding-inline:clamp(16px,4vw,40px);padding-block:0 80px}
+.marco{max-width:1080px;margin:0 auto}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+a{color:inherit}
+.et{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--olivo2)}
+.rombo{display:inline-block;width:9px;height:9px;background:var(--oro);vertical-align:middle;
+  clip-path:polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%)}
+
+/* cabecera */
+.cabeza{padding-block:clamp(48px,7vw,84px) clamp(36px,5vw,56px);border-bottom:1px solid var(--linea);
+  display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px;align-items:end}
+.cabeza h1{font-size:clamp(40px,6vw,72px);line-height:1;font-weight:300;margin:14px 0 18px}
+.cabeza h1 em{font-style:italic;color:var(--vino)}
+.cabeza .baj{max-width:52ch;color:var(--tinta2);font-size:15.5px}
+.cabeza .frase{border-left:1px solid var(--oro);padding-left:22px;font-family:var(--display);
+  font-size:clamp(19px,2.2vw,24px);line-height:1.4;font-style:italic;color:var(--vino)}
+.cabeza .frase small{display:block;font-family:var(--texto);font-style:normal;font-size:10px;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin-top:14px}
+@media (max-width:760px){.cabeza{grid-template-columns:1fr;align-items:start}}
+
+/* secciones */
+section{padding-block:clamp(44px,6vw,72px);border-bottom:1px solid var(--linea)}
+section:last-of-type{border-bottom:0}
+.cab-sec{display:flex;align-items:baseline;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.cab-sec h2{font-size:clamp(28px,3.6vw,42px);line-height:1.1}
+.cab-sec p{color:var(--tinta2);max-width:60ch}
+
+/* diagnóstico del problema */
+.motivos{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 44px;counter-reset:m}
+.motivo{border-top:1px solid var(--oro);padding-top:16px}
+.motivo h3{font-size:22px;margin-bottom:6px}
+.motivo p{color:var(--tinta2);font-size:14px}
+.regla{margin-top:36px;padding:22px 26px;background:var(--beige);font-size:14.5px;display:flex;gap:18px;align-items:baseline}
+.regla b{font-family:var(--display);font-size:20px;font-weight:500;white-space:nowrap;color:var(--vino)}
+@media (max-width:640px){.motivos{grid-template-columns:1fr}.regla{flex-direction:column;gap:6px}}
+
+/* escalera */
+.escalera{display:grid;grid-template-columns:120px 1fr;row-gap:0;border-top:1px solid var(--linea)}
+.escalera > div{padding:14px 0;border-bottom:1px solid var(--linea)}
+.escalera .nivel{font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--tenue);padding-top:20px}
+.escalera .q{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline}
+.escalera .q b{font-family:var(--display);font-size:22px;font-weight:500}
+.escalera .q span{color:var(--tinta2);font-size:13.5px}
+.escalera .q i{font-style:italic;font-family:var(--display);font-size:17px;color:var(--olivo2)}
+@media (max-width:560px){.escalera{grid-template-columns:1fr}.escalera .nivel{padding:14px 0 0;border-bottom:0}.escalera .nivel+div{padding-top:4px}}
+
+/* paquetes: carta */
+.paquete{display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,.58fr);gap:clamp(20px,4vw,56px);
+  padding:clamp(28px,3.5vw,44px) 0;border-top:1px solid var(--oro)}
+.paquete:last-child{border-bottom:1px solid var(--oro)}
+.paquete .sello{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
+  padding:5px 10px;background:var(--vino);color:var(--sello-txt);margin-bottom:14px}
+.paquete .sello.gratis{background:var(--gratis)}
+.paquete .sello.mensual{background:var(--oro);color:var(--vino2)}
+.paquete h3{font-size:clamp(30px,3.4vw,40px);line-height:1.02;margin-bottom:8px}
+.paquete h3 small{display:block;font-family:var(--texto);font-size:10px;font-weight:600;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--olivo2);margin-top:8px}
+.sintoma{font-family:var(--display);font-style:italic;font-size:20px;line-height:1.35;color:var(--vino);margin:14px 0 12px}
+.promesa{font-size:14px;color:var(--tinta2)}
+.promesa b{font-weight:600;color:var(--tinta)}
+.hace{list-style:none;margin:0;padding:0}
+.hace li{position:relative;padding:9px 0 9px 20px;border-top:1px solid var(--linea);font-size:13.5px}
+.hace li:first-child{border-top:0;padding-top:0}
+.hace li::before{content:"";position:absolute;left:0;top:calc(9px + .7em);width:8px;height:1px;background:var(--vino)}
+.hace li:first-child::before{top:.7em}
+.fichas{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;margin-top:18px;border-top:1px solid var(--linea)}
+.ficha{padding:12px 0;font-size:13px}
+.ficha span{display:block;font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--tenue);margin-bottom:4px}
+.ficha.ancha{grid-column:1/-1;border-top:1px solid var(--linea)}
+.nota-vino{margin-top:14px;font-size:12.5px;color:var(--tinta2);padding-left:14px;border-left:2px solid var(--oro)}
+@media (max-width:760px){.paquete{grid-template-columns:1fr;gap:16px}}
+
+/* selector */
+.selector{width:100%;border-collapse:collapse}
+.selector th{text-align:left;font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--tenue);padding:0 0 12px;border-bottom:1px solid var(--oro)}
+.selector td{padding:14px 0;border-bottom:1px solid var(--linea);vertical-align:baseline}
+.selector td:first-child{font-family:var(--display);font-style:italic;font-size:20px;line-height:1.3;padding-right:24px;width:62%}
+.selector td:last-child{font-weight:500;font-size:13.5px;letter-spacing:.04em}
+.selector td:last-child.gratis{color:var(--olivo2)}
+@media (max-width:560px){.selector td:first-child{font-size:18px;width:auto}}
+
+/* complementos */
+.compl{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
+.compl div{padding:16px 0;border-top:1px solid var(--linea)}
+.compl h4{font-size:19px;font-weight:500;margin-bottom:4px}
+.compl p{font-size:13px;color:var(--tinta2)}
+.compl p em{font-style:normal;color:var(--olivo2);font-size:11px;letter-spacing:.06em}
+@media (max-width:900px){.compl{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.compl{grid-template-columns:1fr}}
+
+/* precios */
+.precio{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.precio ul{margin:0;padding-left:18px;color:var(--tinta2);font-size:14px}
+.precio li{margin-bottom:10px}
+.barras{list-style:none;margin:0;padding:0;font-variant-numeric:tabular-nums}
+.barras li{display:grid;grid-template-columns:110px 1fr 70px;gap:12px;align-items:center;padding:7px 0;font-size:13px}
+.barras li span:first-child{font-family:var(--display);font-size:17px}
+.barras li i{display:block;height:10px;background:var(--vino);opacity:.85;width:calc(var(--v) * 6.5%)}
+.barras li.contigo i{background:var(--oro)}
+.barras li span:last-child{text-align:right;color:var(--tinta2)}
+.barras .aviso{font-size:11px;color:var(--tenue);margin-top:10px;display:block}
+@media (max-width:760px){.precio{grid-template-columns:1fr}}
+
+/* ideas */
+.ideas{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 44px;counter-reset:i}
+.ideas li{counter-increment:i;padding:16px 0 16px 44px;border-top:1px solid var(--linea);position:relative;font-size:14px;color:var(--tinta2)}
+.ideas li::before{content:counter(i);position:absolute;left:0;top:14px;font-family:var(--display);font-size:24px;color:var(--oro);line-height:1}
+.ideas li b{display:block;font-weight:500;color:var(--tinta);font-size:15px;margin-bottom:3px}
+@media (max-width:700px){.ideas{grid-template-columns:1fr}}
+
+/* preguntas */
+.preg{list-style:none;margin:0;padding:0;counter-reset:p}
+.preg li{counter-increment:p;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--linea);font-size:14.5px}
+.preg li::before{content:counter(p);font-family:var(--display);font-size:26px;color:var(--vino);line-height:1}
+.preg li b{font-weight:500}
+.preg li span{display:block;color:var(--tinta2);font-size:13.5px;margin-top:4px}
+.cierre{margin-top:48px;text-align:center;font-family:var(--display);font-style:italic;font-size:22px;color:var(--vino)}
+.cierre small{display:block;font-family:var(--texto);font-style:normal;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--tenue);margin-top:12px}
+a:focus-visible{outline:2px solid var(--vino);outline-offset:3px}
+</style>
+
+<div class="marco">
+
+<header class="cabeza">
+  <div>
+    <p class="et">Casa Núcleo · Propuesta de oferta · Documento de trabajo</p>
+    <h1>Carta de <em>paquetes</em></h1>
+    <p class="baj">Para que el dueño de un negocio lea la web y diga "este es el que necesita mi empresa". Cada paquete empieza por lo que el cliente siente, no por cómo trabajamos.</p>
+  </div>
+  <p class="frase">Entramos a tu negocio como clientes, encontramos lo que te está costando ventas, lo corregimos contigo y lo dejamos por escrito. Después lo hacemos ver como merece y lo llenamos de gente.
+    <small>Qué hace Casa Núcleo, en una frase · corregir · vestir · llenar</small></p>
+</header>
+
+<section>
+  <div class="cab-sec"><h2>Por qué hoy no se entiende</h2></div>
+  <div class="motivos">
+    <div class="motivo"><h3>Se explica el proceso, no el resultado</h3><p>"Cinco pasos" o "tres programas" describen cómo trabajan ustedes. El dueño no compra un proceso; compra que se le resuelva algo.</p></div>
+    <div class="motivo"><h3>Los nombres no dicen nada solos</h3><p>"Impulsa", "Eleva" o "Manual de Cimientos" hay que explicarlos. Un buen nombre de paquete se entiende sin leer la letra chica.</p></div>
+    <div class="motivo"><h3>Falta el síntoma</h3><p>Nadie llega pensando "necesito desarrollo de negocios". Llega pensando "no me llega gente", "voy a abrir y no sé por dónde empezar", "tengo un lugar hermoso y está vacío".</p></div>
+    <div class="motivo"><h3>No hay escalera de precio</h3><p>Sin un paquete chico de entrada ni un plan mensual, el cliente solo puede decir sí a algo grande o no a todo.</p></div>
+  </div>
+  <div class="regla"><b>Regla</b><span>Cada paquete se presenta con el síntoma del cliente, una promesa en una frase, qué se hace, qué se lleva y cuánto dura. El proceso (cliente invisible, manual, marca) va adentro, no en el título.</span></div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>La escalera</h2><p>Se entra por el diagnóstico gratuito. Con el reporte en la mano se recomienda <b>un</b> paquete y, si aplica, uno o dos complementos. Nunca se enseña el catálogo completo en la primera llamada.</p></div>
+  <div class="escalera">
+    <div class="nivel">Gratis</div><div class="q"><b>Diagnóstico Núcleo</b><span>la puerta de entrada</span></div>
+    <div class="nivel">Chico</div><div class="q"><b>Núcleo Express</b><span>un día, un plan</span></div>
+    <div class="nivel">Medio</div><div class="q"><b>Núcleo Origen</b><i>·</i><b>Núcleo Eleva</b><i>·</i><b>Núcleo Destino</b><i>·</i><b>Núcleo Marca</b></div>
+    <div class="nivel">Grande</div><div class="q"><b>Núcleo Plus</b><span>la transformación completa</span></div>
+    <div class="nivel">Grupos</div><div class="q"><b>Núcleo Red</b><span>cadenas y sucursales</span></div>
+    <div class="nivel">Mensual</div><div class="q"><b>Núcleo Contigo</b><span>acompañamiento continuo</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Los paquetes</h2></div>
+
+  <article class="paquete">
+    <div>
+      <span class="sello gratis">Sin costo</span>
+      <h3>Diagnóstico Núcleo<small>La puerta de entrada</small></h3>
+      <p class="sintoma">"No sé qué está fallando."</p>
+      <p class="promesa"><b>Promesa:</b> en una semana te decimos qué encontramos, con hora y minuto.</p>
+    </div>
+    <div>
+      <ul class="hace">
+        <li>Entramos como cualquier cliente y sin avisar: escribimos a tus redes un sábado por la noche, preguntamos precios, pedimos informes, visitamos el local.</li>
+        <li>Revisamos tu ficha de Google, tus redes y tu página como alguien que te busca por primera vez.</li>
+        <li>Si no hay ruta que valga tu dinero, te lo decimos ahí mismo.</li>
+      </ul>
+      <div class="fichas">
+        <div class="ficha"><span>Te llevas</span>Reporte de dos páginas: los cinco puntos donde se te va la gente y el paquete que te conviene</div>
+        <div class="ficha"><span>Duración</span>5 a 7 días</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="paquete">
+    <div>
+      <span class="sello">Chico</span>
+      <h3>Núcleo Express<small>Un día, un plan</small></h3>
+      <p class="sintoma">"Quiero mejorar ya, sin un proyecto largo."</p>
+      <p class="promesa"><b>Promesa:</b> un día de trabajo, diez acciones concretas, un mes de resultados.</p>
+    </div>
+    <div>
+      <ul class="hace">
+        <li>Sesión intensiva de un día en tu negocio con las dos socias.</li>
+        <li>Se decide qué corregir primero y se deja hecho lo que se pueda ese mismo día: respuestas de WhatsApp, ficha de Google, guion de atención, orden de la carta o del mostrador.</li>
+        <li>Revisión a los 30 días.</li>
+      </ul>
+      <div class="fichas">
+        <div class="ficha"><span>Te llevas</span>Plan de diez acciones ordenadas por impacto y costo, con responsable y fecha</div>
+        <div class="ficha"><span>Duración</span>1 día + seguimiento a los 30 días</div>
+        <div class="ficha ancha"><span>Para quién</span>Negocios chicos, primer contacto con Casa Núcleo, o quien quiere probar antes de un paquete grande</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="paquete">
+    <div>
+      <span class="sello">Medio</span>
+      <h3>Núcleo Origen<small>Para abrir</small></h3>
+      <p class="sintoma">"Voy a abrir y no quiero equivocarme."</p>
+      <p class="promesa"><b>Promesa:</b> abres con todo decidido, por escrito y con fila el primer día.</p>
+    </div>
+    <div>
+      <ul class="hace">
+        <li>Validación del modelo y del mercado: quién es tu cliente, qué hay alrededor, qué cobra la competencia.</li>
+        <li>Oferta y precios: qué vendes, cómo lo presentas y cuánto cuesta para que te dé margen.</li>
+        <li>Operación: proveedores, capacidad, turnos, qué pasa cuando hay fila.</li>
+        <li>Identidad de marca y presencia inicial: logotipo, ficha de Google, redes y página básica.</li>
+        <li>Apertura con fila: preapertura, lista de espera, invitados, alianzas con vecinos, primeros 90 días.</li>
+      </ul>
+      <div class="fichas">
+        <div class="ficha"><span>Te llevas</span>Manual Núcleo de apertura, identidad de marca, presencia digital publicada, calendario de 90 días</div>
+        <div class="ficha"><span>Duración</span>8 a 10 semanas</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="paquete">
+    <div>
+      <span class="sello">Medio</span>
+      <h3>Núcleo Eleva<small>Para desestancar</small></h3>
+      <p class="sintoma">"Vendo lo mismo desde hace dos años."</p>
+      <p class="promesa"><b>Promesa:</b> en doce semanas sabes exactamente por qué te estancaste y ya lo estás corrigiendo.</p>
+    </div>
+    <div>
+      <ul class="hace">
+        <li>Cliente invisible completo y radiografía de tres competidores visitados como clientes.</li>
+        <li>Auditoría comercial: qué se vende, qué no, qué margen deja cada cosa.</li>
+        <li>Precios y carta o catálogo: reordenar para vender más de lo que más deja.</li>
+        <li>Canales de venta y atención con guiones y capacitación al equipo.</li>
+        <li>Actualización de marca y presencia digital si hace falta.</li>
+        <li>Plan de crecimiento con indicadores y una segunda visita invisible al cierre para medir el cambio.</li>
+      </ul>
+      <div class="fichas">
+        <div class="ficha"><span>Te llevas</span>Manual Núcleo de crecimiento, guiones, equipo capacitado, tablero de indicadores, medición antes y después</div>
+        <div class="ficha"><span>Duración</span>10 a 12 semanas</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="paquete">
+    <div>
+      <span class="sello">Medio · bandera</span>
+      <h3>Núcleo Destino<small>Para lugares con potencial</small></h3>
+      <p class="sintoma">"Tengo un lugar increíble y no llega gente."</p>
+      <p class="promesa"><b>Promesa:</b> convertimos tu lugar en un destino: razones para ir, facilidad para llegar y motivos para volver.</p>
+      <p class="nota-vino">Restaurantes con vista, terrazas, hoteles boutique, cabañas, viñedos, cafés de pueblo, quintas, salones, spas. Santiago está lleno de estos lugares y nadie en la región vende esto.</p>
+    </div>
+    <div>
+      <ul class="hace">
+        <li>Experiencia firma: el platillo, ritual o momento que la gente fotografía y por el que recomienda el lugar.</li>
+        <li>Google Maps primero: ficha completa, fotos que enamoran, respuesta a reseñas. Es donde la gente decide a dónde ir.</li>
+        <li>Reservas sin fricción: WhatsApp con respuestas listas, enlace de reserva, confirmación automática.</li>
+        <li>Calendario de temporadas: doce razones al año para ir (luna llena, vendimia, brunch de domingo, chimenea en temporada de lluvias).</li>
+        <li>Alianzas locales: paquetes con el hotel, el viñedo o el guía de la zona.</li>
+        <li>Contenido de lanzamiento: sesión de fotos y video, plantillas para publicar.</li>
+        <li>Programa de regreso: un motivo para volver dentro de 30 días.</li>
+      </ul>
+      <div class="fichas">
+        <div class="ficha"><span>Te llevas</span>Manual Núcleo de destino, ficha y reservas funcionando, banco de fotos, calendario anual, primer evento realizado</div>
+        <div class="ficha"><span>Duración</span>8 a 12 semanas</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="paquete">
+    <div>
+      <span class="sello">Medio</span>
+      <h3>Núcleo Marca<small>Para verse como lo que vale</small></h3>
+      <p class="sintoma">"Mi negocio es mejor de lo que parece."</p>
+      <p class="promesa"><b>Promesa:</b> que tu marca se vea profesional y con nivel sin dejar de parecerse a ti.</p>
+      <p class="nota-vino">Solo se vende después del diagnóstico o de un paquete de corrección. Una marca bonita encima de un problema solo lo hace más visible. Esto se dice tal cual: es argumento de venta, no limitación.</p>
+    </div>
+    <div>
+      <ul class="hace">
+        <li>Logotipo y versiones, paleta y tipografías.</li>
+        <li>Aplicaciones: papelería, empaque, letreros, uniformes.</li>
+        <li>Plantillas para redes y ficha de Google alineada.</li>
+        <li>Sitio web a la medida con manual para editarlo.</li>
+      </ul>
+      <div class="fichas">
+        <div class="ficha"><span>Te llevas</span>Identidad completa, manual de marca, sitio publicado, plantillas, sesión de entrega con tu equipo</div>
+        <div class="ficha"><span>Duración</span>6 a 8 semanas</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="paquete">
+    <div>
+      <span class="sello">Grande</span>
+      <h3>Núcleo Plus<small>La transformación completa</small></h3>
+      <p class="sintoma">"Quiero que se hagan cargo de todo."</p>
+      <p class="promesa"><b>Promesa:</b> en un semestre tu negocio opera mejor, se ve mejor y tiene más gente, con todo medido y por escrito.</p>
+    </div>
+    <div>
+      <ul class="hace">
+        <li>Núcleo Eleva u Origen, según el caso.</li>
+        <li>Núcleo Marca completo.</li>
+        <li>Los módulos de Destino que apliquen.</li>
+        <li>Relanzamiento o apertura con evento.</li>
+        <li>Tres meses de Núcleo Contigo.</li>
+      </ul>
+      <div class="fichas">
+        <div class="ficha"><span>Te llevas</span>Todo lo anterior, más un cierre con medición antes y después</div>
+        <div class="ficha"><span>Duración</span>5 a 6 meses</div>
+        <div class="ficha ancha"><span>Cupo</span>Máximo dos o tres al año, y decirlo. La escasez es real y vende.</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="paquete">
+    <div>
+      <span class="sello">Grupos</span>
+      <h3>Núcleo Red<small>Para grupos y sucursales</small></h3>
+      <p class="sintoma">"Cada sucursal atiende distinto."</p>
+      <p class="promesa"><b>Promesa:</b> que todas tus unidades operen igual de bien, y que la siguiente abra sin reinventar nada.</p>
+    </div>
+    <div>
+      <ul class="hace">
+        <li>Diagnóstico invisible por unidad.</li>
+        <li>Manual maestro y manuales por sucursal; lineamientos para que todas operen igual.</li>
+        <li>Capacitación de los responsables de cada punto.</li>
+        <li>Tablero comparativo entre unidades.</li>
+        <li>Manual de replicación para la siguiente apertura.</li>
+      </ul>
+      <div class="fichas">
+        <div class="ficha"><span>Te llevas</span>Manual maestro, manuales por sucursal, tablero, equipo capacitado, cliente invisible trimestral opcional</div>
+        <div class="ficha"><span>Duración</span>A la medida, típicamente 3 a 4 meses</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="paquete">
+    <div>
+      <span class="sello mensual">Mensual</span>
+      <h3>Núcleo Contigo<small>Acompañamiento continuo</small></h3>
+      <p class="sintoma">"No quiero que lo que logramos se caiga."</p>
+      <p class="promesa"><b>Promesa:</b> cada mes una visita invisible, una revisión de números y una mejora hecha.</p>
+      <p class="nota-vino">Es el ingreso recurrente de Casa Núcleo y lo que mantiene la relación después del proyecto grande.</p>
+    </div>
+    <div>
+      <ul class="hace">
+        <li>Visita de cliente invisible mensual con reporte.</li>
+        <li>Revisión de indicadores.</li>
+        <li>Una mejora concreta al mes: guion, ficha, carta, campaña de temporada.</li>
+        <li>Una hora de consulta con las socias y dudas por WhatsApp.</li>
+      </ul>
+      <div class="fichas">
+        <div class="ficha"><span>Te llevas</span>Reporte mensual y una mejora hecha cada mes</div>
+        <div class="ficha"><span>Duración</span>Mensual, mínimo tres meses</div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Cómo elegir</h2><p>Así se vería en la web: la sección "¿Qué le pasa a tu negocio?". Cada frase es una tarjeta que lleva a su paquete.</p></div>
+  <table class="selector">
+    <thead><tr><th>Si piensas…</th><th>Tu paquete</th></tr></thead>
+    <tbody>
+      <tr><td>"No sé qué está fallando."</td><td class="gratis">Diagnóstico Núcleo · sin costo</td></tr>
+      <tr><td>"Quiero mejorar ya, sin un proyecto largo."</td><td>Núcleo Express</td></tr>
+      <tr><td>"Voy a abrir y no quiero equivocarme."</td><td>Núcleo Origen</td></tr>
+      <tr><td>"Vendo lo mismo desde hace dos años."</td><td>Núcleo Eleva</td></tr>
+      <tr><td>"Tengo un lugar increíble y no llega gente."</td><td>Núcleo Destino</td></tr>
+      <tr><td>"Mi negocio es mejor de lo que parece."</td><td>Núcleo Marca</td></tr>
+      <tr><td>"Quiero que se hagan cargo de todo."</td><td>Núcleo Plus</td></tr>
+      <tr><td>"Cada sucursal atiende distinto."</td><td>Núcleo Red</td></tr>
+      <tr><td>"No quiero que lo que logramos se caiga."</td><td>Núcleo Contigo</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Complementos</h2><p>Cualquier paquete se puede completar con uno o dos de estos. También se venden sueltos a quien ya es cliente.</p></div>
+  <div class="compl">
+    <div><h4>Cliente Invisible</h4><p>Visita anónima única con bitácora de hallazgos, o mensual. <em>Todos con atención al público</em></p></div>
+    <div><h4>Radiografía de competencia</h4><p>Visitamos tres competidores como clientes y comparamos. <em>Eleva · Origen</em></p></div>
+    <div><h4>Carta que vende</h4><p>Reordenar carta o catálogo por margen y rotación; diseño incluido. <em>Restaurantes · cafés · boutiques</em></p></div>
+    <div><h4>Precio con criterio</h4><p>Revisión de precios y márgenes con estructura escrita. <em>Todos</em></p></div>
+    <div><h4>Guion de mostrador</h4><p>Guiones de atención y venta, capacitación y visita invisible para evaluar. <em>Negocios con equipo</em></p></div>
+    <div><h4>Google Maps primero</h4><p>Ficha completa, fotos, reseñas, preguntas. La mayoría decide ahí. <em>Negocios con local</em></p></div>
+    <div><h4>Reservas sin fricción</h4><p>WhatsApp Business con catálogo, respuestas y enlace de reserva. <em>Restaurantes · salones · spas · clínicas</em></p></div>
+    <div><h4>Espacio que vende</h4><p>El recorrido del cliente en el local: entrada, mostrador, señalética, ambiente, el rincón de la foto. <em>Locales físicos</em></p></div>
+    <div><h4>Contenido de 90 días</h4><p>Sesión de fotos y video, calendario de publicaciones y plantillas. <em>Todos</em></p></div>
+    <div><h4>Apertura o relanzamiento con fila</h4><p>Plan y ejecución del evento: lista de espera, invitados, alianzas, prensa local. <em>Origen · Plus · Eleva</em></p></div>
+    <div><h4>Calendario de temporadas</h4><p>Doce razones al año para visitar. <em>Destino · restaurantes · hoteles</em></p></div>
+    <div><h4>Alianzas locales</h4><p>Paquetes conjuntos con negocios vecinos o de la región. <em>Destino · Santiago</em></p></div>
+    <div><h4>Programa de regreso</h4><p>Un motivo simple para volver en 30 días, sin app ni tarjetas complicadas. <em>Comercio · restaurantes</em></p></div>
+    <div><h4>Manual de sucursal</h4><p>Cómo replicar el negocio en un segundo punto. <em>Eleva · Red</em></p></div>
+    <div><h4>Sitio a la medida</h4><p>Página nueva o corregida, con manual para editarla. <em>Todos</em></p></div>
+  </div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Precios: cómo pensarlos</h2><p>Hipótesis para validar, no cifras finales. Faltan tres datos para ponerles número: horas de las socias por paquete, proyectos que caben al mes y lo que cobran hoy.</p></div>
+  <div class="precio">
+    <ul>
+      <li><b>Rangos "desde", no precios cerrados.</b> El alcance se cierra por escrito después del diagnóstico. Un "desde" orienta y filtra a quien no tiene presupuesto.</li>
+      <li><b>Escalera con anclas.</b> Que Núcleo Plus exista y se vea hace que Eleva parezca razonable. Que Express exista permite decir sí a algo pequeño.</li>
+      <li><b>Contigo se mide al mes.</b> Ingreso recurrente que sostiene el estudio entre proyectos.</li>
+    </ul>
+    <div>
+      <ul class="barras" aria-label="Orden de magnitud sugerido, tomando Express como unidad">
+        <li><span>Express</span><i style="--v:1"></i><span>1</span></li>
+        <li><span>Marca</span><i style="--v:3.5"></i><span>3 a 4</span></li>
+        <li><span>Origen</span><i style="--v:5"></i><span>4 a 6</span></li>
+        <li><span>Eleva</span><i style="--v:5"></i><span>4 a 6</span></li>
+        <li><span>Destino</span><i style="--v:5"></i><span>4 a 6</span></li>
+        <li><span>Red</span><i style="--v:8"></i><span>6 a 10</span></li>
+        <li><span>Plus</span><i style="--v:12"></i><span>10 a 14</span></li>
+        <li class="contigo"><span>Contigo</span><i style="--v:0.8"></i><span>0.6 a 1 / mes</span></li>
+      </ul>
+      <span class="aviso">Orden de magnitud tomando Núcleo Express como unidad. Las cifras en pesos se fijan con los tres datos de arriba.</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Ideas que no estaban</h2></div>
+  <ol class="ideas">
+    <li><b>Núcleo Destino como bandera</b>Nadie en la región vende "convertir tu lugar en un destino". Es el paquete más diferenciado y el más fácil de contar.</li>
+    <li><b>Núcleo Contigo</b>Ingreso mensual. Sin esto cada proyecto termina y hay que volver a vender desde cero.</li>
+    <li><b>La segunda visita invisible al cierre</b>Medir antes y después con el mismo criterio ya es su promesa; hacerlo con una visita anónima final la vuelve demostrable.</li>
+    <li><b>Experiencia firma</b>Un solo momento que la gente fotografía vale más que diez publicaciones. Se diseña, no se espera.</li>
+    <li><b>Google Maps primero</b>Casi todo negocio local se descubre ahí y casi ninguno tiene la ficha bien hecha. Barato y con efecto en semanas.</li>
+    <li><b>Apertura con fila</b>Vender la apertura como evento, con lista de espera e invitados, en lugar de "abrimos y a ver quién llega".</li>
+    <li><b>Radiografía de competencia</b>Visitar a los tres de al lado como clientes. A los dueños les encanta.</li>
+    <li><b>Cupo limitado y dicho</b>"Tomamos seis proyectos por semestre." Es cierto para dos socias y vende.</li>
+    <li><b>Casos con antes y después medidos</b>Cada paquete termina con dos o tres números. Con tres casos así, el portafolio se escribe solo.</li>
+    <li><b>Manual de sucursal como producto de salida</b>Cuando un cliente de Eleva crece, el siguiente paquete ya existe.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="cab-sec"><h2>Lo que necesito confirmar con ustedes</h2></div>
+  <ol class="preg">
+    <li><div><b>¿Qué sí hacen con sus manos y qué subcontratan?</b><span>Fotografía y video, diseño de espacios, eventos, sitio web, capacitación. Lo que no hagan ustedes se ofrece con aliados, pero hay que saberlo para escribir "te llevas".</span></div></li>
+    <li><div><b>¿Cuántos proyectos caben al mes?</b><span>Define precios y el cupo que se anuncia.</span></div></li>
+    <li><div><b>¿Cuál es el paquete bandera?</b><span>Recomiendo Destino por diferenciación, o Eleva por volumen. Con uno solo se hace toda la comunicación de lanzamiento.</span></div></li>
+    <li><div><b>¿Los nombres convencen?</b><span>Origen · Eleva · Destino · Marca · Plus · Red · Express · Contigo. Se pueden cambiar; lo importante es que cada uno diga algo sin leer la letra chica.</span></div></li>
+    <li><div><b>¿Precios visibles como "desde", o solo tras el diagnóstico?</b><span>Recomiendo "desde".</span></div></li>
+  </ol>
+  <p class="cierre">Más negocios bien hechos.<small>Casa Núcleo · Monterrey · San Pedro Garza García · Santiago</small></p>
+</section>
+
+</div>
